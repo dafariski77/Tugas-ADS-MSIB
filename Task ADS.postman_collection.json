@@ -1,0 +1,514 @@
+{
+	"info": {
+		"_postman_id": "1e99451d-b32f-4a5e-b5c6-a48811cd980d",
+		"name": "Task ADS",
+		"description": "Lihat dokumentasi lengkap klik View complete documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22600370"
+	},
+	"item": [
+		{
+			"name": "Tugas",
+			"item": [
+				{
+					"name": "Get Sisa Cuti Karyawan",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_DEV}}/cuti/sisa-cuti",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"cuti",
+								"sisa-cuti"
+							]
+						},
+						"description": "Endpoint : **GET** /api/cuti/sisa-cuti\n\nHeaders :\n\n- Authorization : token\n    \n\nResponse Body Success :\n\n``` json\n{\n    \"data\": [\n        {\n            \"nomor_induk\": \"IP06001\",\n            \"nama\": \"Agus\",\n            \"sisa_cuti\": 12\n        }\n    ]\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Karyawan Pertama",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_DEV}}/karyawan-pertama",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"karyawan-pertama"
+							]
+						},
+						"description": "Endpoint : **GET** /api/karyawan-pertama\n\nHeaders :\n\n- Authorization : token\n    \n\nResponse Body Success :\n\n``` json\n{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nomor_induk\": \"IP06001\",\n            \"nama\": \"Agus\",\n            \"alamat\": \"Jln Gaja Mada no 12, Surabaya\",\n            \"tanggal_lahir\": \"1980-01-12\",\n            \"tanggal_bergabung\": \"2005-08-07\",\n            \"sisa_cuti\": 12\n        }\n    ]\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Karyawan Cuti",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_DEV}}/cuti",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"cuti"
+							]
+						},
+						"description": "Endpoint : **GET** /api/karyawan-pertama\n\nHeaders :\n\n- Authorization : token\n    \n\nResponse Body Success :\n\n``` json\n{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nomor_induk\": \"IP06001\",\n            \"nama\": \"Agus\",\n            \"alamat\": \"Jln Gaja Mada no 12, Surabaya\",\n            \"tanggal_lahir\": \"1980-01-12\",\n            \"tanggal_bergabung\": \"2005-08-07\",\n            \"sisa_cuti\": 10\n        }\n    ]\n}\n\n ```"
+					},
+					"response": []
+				}
+			],
+			"description": "Tugas Task ADS MSIB",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Karyawan",
+			"item": [
+				{
+					"name": "Get all Karyawan",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_DEV}}/karyawan",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"karyawan"
+							]
+						},
+						"description": "Endpoint : **GET** /api/karyawan\n\nHeaders :\n\n- Authorization : token\n    \n\nResponse Body Success :\n\n``` json\n{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nomor_induk\": \"IP06001\",\n            \"nama\": \"Agus\",\n            \"alamat\": \"Jln Gaja Mada no 12, Surabaya\",\n            \"tanggal_lahir\": \"1980-01-12\",\n            \"tanggal_bergabung\": \"2005-08-07\",\n            \"sisa_cuti\": 12\n        }\n    ]\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get one karyawan",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_DEV}}/karyawan/3",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"karyawan",
+								"3"
+							]
+						},
+						"description": "Endpoint : **GET** /api/karyawan/{id}\n\nHeaders :\n\n- Authorization : token\n    \n\nResponse Body Success :\n\n``` json\n{\n\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nomor_induk\": \"IP06001\",\n            \"nama\": \"Agus\",\n            \"alamat\": \"Jln Gaja Mada no 12, Surabaya\",\n            \"tanggal_lahir\": \"1980-01-12\",\n            \"tanggal_bergabung\": \"2005-08-07\",\n            \"sisa_cuti\": 12\n        }\n    ]\n}\n}\n\n ```\n\nResponse Body Error :\n\n``` json\n{\n    \"message\": \"Karyawan not found.\"\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Karyawan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomor_induk\": \"IP06010\",\r\n    \"nama\": \"Raisa\",\r\n    \"alamat\": \"Jln Kelapa Sawit, Jakarta Selatan\",\r\n    \"tanggal_lahir\": \"1990-12-17\",\r\n    \"tanggal_bergabung\": \"2008-08-16\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_DEV}}/karyawan",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"karyawan"
+							]
+						},
+						"description": "Endpoint : **POST** /api/karyawan\n\nHeaders :\n\n- Authorization : token\n    \n\nResponse Body Success :\n\n``` json\n{\n    \"data\": {\n        \"id\": 1,\n        \"nomor_induk\": \"IP06001\",\n        \"nama\": \"Agus\",\n        \"alamat\": \"Jln Gaja Mada no 12, Surabaya\",\n        \"tanggal_lahir\": \"1980-01-12\",\n        \"tanggal_bergabung\": \"2005-08-07\",\n        \"sisa_cuti\": 12\n    }\n}\n\n ```\n\nResponse Body Error :\n\n``` json\n{\n    \"message\": \"The nomor induk has already been taken.\",\n    \"errors\": {\n        \"nomor_induk\": [\n            \"The nomor induk has already been taken.\"\n        ]\n    }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Karyawan",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomor_induk\": \"IP06010\",\r\n    \"nama\": \"Raisa\",\r\n    \"alamat\": \"Jln Kelapa Sawit, Jakarta Selatan\",\r\n    \"tanggal_lahir\": \"1990-12-17\",\r\n    \"tanggal_bergabung\": \"2008-08-16\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_DEV}}/karyawan/1",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"karyawan",
+								"1"
+							]
+						},
+						"description": "Endpoint : **PUT** /api/karyawan/{id}\n\nHeaders :\n\n- Authorization : token\n    \n\nResponse Body Success :\n\n``` json\n{\n    \"data\": {\n        \"id\": 1,\n        \"nomor_induk\": \"IP06001\",\n        \"nama\": \"Agus\",\n        \"alamat\": \"Jln Gaja Mada no 12, Surabaya\",\n        \"tanggal_lahir\": \"1980-01-12\",\n        \"tanggal_bergabung\": \"2005-08-07\",\n        \"sisa_cuti\": 12\n    }\n}\n\n ```\n\nResponse Body Error :\n\n``` json\n{\n    \"message\": \"The nomor induk has already been taken.\",\n    \"errors\": {\n        \"nomor_induk\": [\n            \"The nomor induk has already been taken.\"\n        ]\n    }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Karyawan",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_DEV}}/karyawan/3",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"karyawan",
+								"3"
+							]
+						},
+						"description": "Endpoint : **DELETE** /api/karyawan/{id}\n\nHeaders :\n\n- Authorization : token\n    \n\nResponse Body Success :\n\n``` json\n{\n    \"message\": \"Data berhasil dihapus!\"\n}\n\n ```\n\nResponse Body Error :\n\n``` json\n{\n    \"message\": \"Karyawan not found.\"\n}\n\n ```"
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD untuk tabel karyawan"
+		},
+		{
+			"name": "Cuti",
+			"item": [
+				{
+					"name": "Get all Cuti",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_DEV}}/cuti-karyawan",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"cuti-karyawan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Cuti",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL_DEV}}/cuti-karyawan/1",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"cuti-karyawan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Cuti",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomor_induk\": \"IP06003\",\r\n    \"tanggal_cuti\": \"2020-08-30\",\r\n    \"lama_cuti\": 2,\r\n    \"keterangan\": \"Acara Keluarga\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_DEV}}/cuti-karyawan",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"cuti-karyawan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cuti",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomor_induk\": \"NIM224\",\r\n    \"tanggal_cuti\": \"2022-11-12\",\r\n    \"lama_cuti\": 3,\r\n    \"keterangan\": \"sakito\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_DEV}}/cuti-karyawan/1",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"cuti-karyawan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cuti",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomor_induk\": \"NIM224\",\r\n    \"tanggal_cuti\": \"2022-11-12\",\r\n    \"lama_cuti\": 3,\r\n    \"keterangan\": \"sakito\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_DEV}}/cuti-karyawan/2",
+							"host": [
+								"{{URL_DEV}}"
+							],
+							"path": [
+								"cuti-karyawan",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD untuk tabel cuti"
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test1@example.com\",\r\n    \"password\": \"rahasia123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_DEV}}/login",
+					"host": [
+						"{{URL_DEV}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test 1\",\r\n    \"email\": \"test1@example.com\",\r\n    \"password\": \"rahasia123\",\r\n    \"password_confirmation\": \"rahasia123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_DEV}}/register",
+					"host": [
+						"{{URL_DEV}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL_DEV}}/logout",
+					"host": [
+						"{{URL_DEV}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "2|otq2aGQKEsi3gQsyBucF5BAqme7mpdRMeQ7ksOai",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_DEV",
+			"value": "localhost:8000/api",
+			"type": "string"
+		}
+	]
+}
